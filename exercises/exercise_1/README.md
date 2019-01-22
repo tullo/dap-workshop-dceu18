@@ -64,7 +64,9 @@ Login Succeeded
 
 **6.** Run the workshop image.
 
-We prepared an image containing everything needed for the workshop (docker CLI, docker-compose, docker-app, swarm, ...) and your prefered editors (nano, emacs, even vi!). Please run it, everything will happen in this container. 
+We prepared an image containing everything needed for the workshop (docker CLI, docker-compose, docker-app, swarm, ...) and your prefered editors (nano, emacs, even vi!). Please run it, everything will happen in this container.
+
+**NOTE:** `--network host` is needed in play-with-docker to have exposed port be available from outside!
 
 ```sh
 $ docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v /root/workshop:/workshop dapworkshop/workshop
